@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../../assets/fonts/icomoon.eot?-wnredh');
+  src: url('../../assets/fonts/icomoon.eot?#iefix-wnredh') format('embedded-opentype'), url('../../assets/fonts/icomoon.woff?-wnredh') format('woff'), url('../../assets/fonts/icomoon.ttf?-wnredh') format('truetype'), url('../../assets/fonts/icomoon.svg?-wnredh#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-search:before {
+  content: "\e601"; }
+
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box; }
+
+input:-webkit-autofill {
+  background-color: #333333 !important; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.col {
+  float: left;
+  padding-right: 0.8rem; }
+
+.col-1-4 {
+  width: 25%; }
+
+.col-3-4 {
+  width: 75%; }
+
+.container {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  min-height: 100vh;
+  background-color: #333333;
+  -webkit-transition: background-color 0.5s linear;
+          transition: background-color 0.5s linear; }
+  .searched .container {
+    background-color: #E5E5E5; }
+
+.searchWrapper {
+  height: 50vh;
+  padding-top: 43vh;
+  -webkit-transition: height 0.5s linear, padding-top 0.5s linear;
+          transition: height 0.5s linear, padding-top 0.5s linear;
+  background: #333333; }
+  .searched .searchWrapper {
+    height: 8vh;
+    padding-top: 2vh; }
+
+.formWrapper {
+  position: relative;
+  width: 50rem;
+  margin: 0 auto;
+  color: white;
+  font-size: 1.625rem;
+  -webkit-transition: top 0.5s linear;
+          transition: top 0.5s linear; }
+
+.searchField {
+  -webkit-appearance: none;
+  width: 40%;
+  margin: 0 0 0 0.2rem;
+  background-color: #333333;
+  border: none;
+  border-bottom: 4px dashed #85BB23;
+  color: white;
+  font-size: 1.625rem; }
+  .searchField:focus {
+    outline: none; }
+
+.searchButton {
+  -webkit-appearance: none;
+  margin-left: 2rem;
+  background: none;
+  border: 0;
+  color: white;
+  font-size: 1.875rem; }
+  .searchButton:hover {
+    cursor: pointer; }
+  .searchButton:focus {
+    outline: 0; }
+
+.errorBalloon {
+  position: absolute;
+  top: 3.5rem;
+  left: 22.5rem;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  background: #CC3112;
+  font-size: 0.8em;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
+          transition: opacity 0.2s ease; }
+  .errorBalloon:after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #CC3112; }
+  .errorBalloon.shown {
+    opacity: 1; }
+
+.resultsWrapper {
+  max-width: 75rem;
+  margin: 0 auto; }
+  .resultsWrapper:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.searchedLine {
+  margin: 2rem 0;
+  font-size: 2rem; }
+  .searchedLine .artistName {
+    border-bottom: 2px solid #85BB23; }
+
+.artistsList:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.artistBlock {
+  clear: left;
+  max-height: 18.75rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 4px solid #85BB23; }
+  .artistBlock:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .artistBlock h2 {
+    display: inline-block;
+    border-bottom: 2px solid #333333; }
+  .artistBlock .imgContainer {
+    max-height: 17.5rem;
+    overflow: hidden; }
+
+.linksList {
+  list-style: none; }
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Discover!</title>
+  <link rel="stylesheet" href="dist/css/styles.css">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <script id="artistTemplate" type="x-tmpl-mustache">
+    <div class="artistBlock">
+      <div class=" col col-1-4">
+      <div class="imgContainer">
+        <img src="{{ imageURL }}">
+      </div>
+      </div>
+      <!-- End col-1-4 -->
+      <div class="col col-3-4">
+        <h2>{{ name }}</h2>
+        <div class="links">
+          <ul class="linksList">
+          <li>
+            <a href="http://en.wikipedia.org/wiki/{{ wikipediaLink }}">Wikipedia</a>
+          </li>
+          <li>
+            <a href="{{ spotifyLink }}">Spotify</a>
+          </li>
+          </ul>
+        </div>
+        <!-- End Links -->
+      </div>
+      <!-- End col 3-4 -->
+    </div>
+    <!-- End ArtistBlock -->
+  </script>
+</head>
+<body>
+  <main class="container">
+    <section class="searchWrapper">
+      <div class="formWrapper">
+          <p>Find artists similar to 
+            <input type="text" id="searchField" class="searchField" autocomplete="off">
+            <button id="submit" class="icon-search searchButton"></button>
+          </p>
+          <div class="errorBalloon" id="errorBalloon"></div>
+      </div>
+    </section>
+    <section class="resultsWrapper">
+      <p class="searchedLine">Artists related to <span class="artistName"></span><p>
+      <div class="artistsList"></div>
+    </section>
+  </main>
+  <script src="dist/js/main-min.js"></script>
+</body>
+</html>
