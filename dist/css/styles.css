@@ -140,6 +140,10 @@ img {
   content: "";
   display: table;
   clear: both; }
+.artistsList .error {
+  text-align: center;
+  font-size: 2rem;
+  color: #CC3112; }
 
 .artistBlock {
   clear: left;

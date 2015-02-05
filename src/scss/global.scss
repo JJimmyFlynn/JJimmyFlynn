@@ -185,6 +185,11 @@ img {
 
 .artistsList {
   @include clearfix;
+  .error {
+    text-align: center;
+    font-size: 2rem;
+    color: #CC3112;
+  }
 }
 
 // Artist Block Styles

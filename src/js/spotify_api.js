@@ -13,7 +13,7 @@ function getRelatedArtists(query) {
           artistID = data.artists.items[0].id;
           relatedRequest(artistID);
         } else {
-          displayError("Could not find the artist" + query)
+          displayError("Sorry, could not find the artist" + query);
         }
       }
     });
@@ -32,7 +32,7 @@ function getRelatedArtists(query) {
           appendArtists(relatedArtists);
           revealResults();
         } else {
-          displayError("No related artists found.")
+          displayError("No related artists found.");
           revealResults();
         }
       },
