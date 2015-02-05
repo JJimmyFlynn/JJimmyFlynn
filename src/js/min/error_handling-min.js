@@ -1,1 +1,0 @@
-function displayError(s){$(".artistsList").empty(),$(".artistsList").append("<p class='error'>"+s+"</p>")}

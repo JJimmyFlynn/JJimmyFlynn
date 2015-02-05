@@ -17,31 +17,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-search:before {
-  content: "\e601"; }
-
 * {
   margin: 0;
   padding: 0;
   -moz-box-sizing: border-box;
        box-sizing: border-box; }
-
-input:-webkit-autofill {
-  background-color: #333333 !important; }
-
-img {
-  max-width: 100%;
-  height: auto; }
-
-.col {
-  float: left;
-  padding-right: 0.8rem; }
-
-.col-1-4 {
-  width: 25%; }
-
-.col-3-4 {
-  width: 75%; }
 
 .container {
   font-family: 'Montserrat', sans-serif;
@@ -53,6 +33,23 @@ img {
   .searched .container {
     background-color: #E5E5E5; }
 
+input:-webkit-autofill {
+  background-color: #333333 !important; }
+
+.col {
+  float: left;
+  padding-right: 0.8rem; }
+
+.col-1-4 {
+  width: 25%; }
+
+.col-3-4 {
+  width: 75%; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
 .searchWrapper {
   height: 50vh;
   padding: 43vh 1rem 0;
@@ -62,6 +59,31 @@ img {
   .searched .searchWrapper {
     height: 8vh;
     padding-top: 2vh; }
+
+.resultsWrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: none; }
+  .resultsWrapper:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.searchedLine {
+  margin: 2rem 0;
+  font-size: 2rem; }
+  .searchedLine .artistName {
+    border-bottom: 2px solid #85BB23; }
+
+.artistsList:after {
+  content: "";
+  display: table;
+  clear: both; }
+.artistsList .error {
+  text-align: center;
+  font-size: 2rem;
+  color: #CC3112; }
 
 .formWrapper {
   position: relative;
@@ -118,31 +140,6 @@ img {
   .searchForm-errorBalloon.shown {
     opacity: 1; }
 
-.resultsWrapper {
-  max-width: 75rem;
-  margin: 0 auto;
-  padding: 0 1rem;
-  display: none; }
-  .resultsWrapper:after {
-    content: "";
-    display: table;
-    clear: both; }
-
-.searchedLine {
-  margin: 2rem 0;
-  font-size: 2rem; }
-  .searchedLine .artistName {
-    border-bottom: 2px solid #85BB23; }
-
-.artistsList:after {
-  content: "";
-  display: table;
-  clear: both; }
-.artistsList .error {
-  text-align: center;
-  font-size: 2rem;
-  color: #CC3112; }
-
 .artistBlock {
   clear: left;
   max-height: 18.75rem;
@@ -168,4 +165,7 @@ img {
     display: inline-block;
     max-width: 60px;
     margin-right: 0.8rem; }
+
+.icon-search:before {
+  content: "\e601"; }
 /*# sourceMappingURL=styles.css.map */

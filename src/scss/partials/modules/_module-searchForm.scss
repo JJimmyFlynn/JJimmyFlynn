@@ -1,0 +1,64 @@
+// Form Styles
+.formWrapper {
+  position: relative;
+  width: 50rem;
+  margin: 0 auto;
+  color: white;
+  font-size: 1.625rem;
+  transition: top 0.5s linear;
+}
+
+.searchForm {
+  &-searchField {
+    -webkit-appearance: none;
+    width: 40%;
+    margin: 0 0 0 .2rem;
+    background-color: $brandBlack;
+    border: none;
+    border-bottom: 4px dashed $spotifyGreen;
+    color: white;
+    font-size: 1.625rem;
+    &:focus {
+      outline: none;
+    }
+  }
+  &-searchButton {
+    -webkit-appearance: none;
+    margin-left: 1rem;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 1.875rem;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
+  &-errorBalloon {
+    position: absolute;
+    top: 3.5rem;
+    left: 22.5rem;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    background: $errorRed;
+    font-size: 0.8em;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    &:after {
+      content: "";
+      position: absolute;
+      top: -15px;
+      right: 15px;
+      width: 0; 
+      height: 0; 
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid $errorRed;
+    }
+    &.shown {
+      opacity: 1;
+    }
+  }
+}

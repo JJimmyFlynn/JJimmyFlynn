@@ -1,0 +1,29 @@
+// Artist Block Styles
+.artistBlock {
+  @include clearfix;
+  clear: left;
+  max-height: 18.75rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 4px solid $spotifyGreen;
+  &-artistHeader {
+    display: inline-block;
+    border-bottom: 2px solid $brandBlack;
+  }
+  &-imgContainer {
+    max-height: 17.5rem;
+    overflow: hidden;
+  }
+}
+
+.linksList {
+  list-style: none;
+  margin-top: 2rem;
+
+  &-link {
+    display: inline-block;
+    max-width: 60px;
+    margin-right: 0.8rem;
+  }
+}

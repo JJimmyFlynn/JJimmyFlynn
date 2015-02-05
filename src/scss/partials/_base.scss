@@ -1,0 +1,24 @@
+// Quick Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Base Styles
+.container {
+  @include bodyFont;
+  position: relative;
+  min-height: 100vh;
+  background-color: $brandBlack;
+  transition: background-color 0.5s linear;
+
+  .searched & {
+    background-color: #E5E5E5;
+  }
+}
+
+// Nix yellow backgorund after autofill 
+input:-webkit-autofill {
+  background-color: $brandBlack !important;
+}
