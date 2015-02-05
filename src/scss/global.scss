@@ -171,6 +171,7 @@ img {
   @include clearfix;
   max-width: 75rem;
   margin: 0 auto;
+  display: none;
 }
 
 .searchedLine {
@@ -206,4 +207,11 @@ img {
 
 .linksList {
   list-style: none;
+  margin-top: 2rem;
+
+  &-link {
+    display: inline-block;
+    max-width: 60px;
+    margin-right: 0.8rem;
+  }
 }

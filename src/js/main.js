@@ -2,8 +2,6 @@
 // Global Variable Declarations
 var relatedArtists = [];
 
-$('.resultsWrapper').hide();
-
 // Focus on search on page load
 $('#searchField').focus();
 
@@ -43,7 +41,8 @@ function subsequentSearch() {
 }
 
 // Make Spotify Request on Submit
-$("#submit").on("click", function() {
+$("#searchForm").submit(function(event) {
+  event.preventDefault();
   if(!$('body').hasClass('searched')) {
     firstSearch();
   } else {

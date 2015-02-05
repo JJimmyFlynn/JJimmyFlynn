@@ -15,17 +15,29 @@
       <!-- End col-1-4 -->
       <div class="col col-3-4">
         <h2>{{ name }}</h2>
-        <div class="links">
           <ul class="linksList">
-          <li>
-            <a href="http://en.wikipedia.org/wiki/{{ wikipediaLink }}">Wikipedia</a>
+          <li class="linksList-link">
+            <a href="http://en.wikipedia.org/wiki/{{ encodedArtist }}">
+              <img src="../../assets/images/wikipedia.png" alt="wikipedia" />
+            </a>
           </li>
-          <li>
-            <a href="{{ spotifyLink }}">Spotify</a>
+          <li class="linksList-link">
+            <a href="{{ spotifyLink }}">
+              <img src="../../assets/images/spotify.png" alt="spotify" />
+            </a>
+          </li>
+          <li class="linksList-link">
+            <a href="http://grooveshark.com/#!/search/artist?q={{ encodedArtist }}">
+              <img src="../../assets/images/grooveshark.png" alt="grooveshark" />
+            </a>
+          </li>
+          <li class="linksList-link">
+            <a href="https://www.youtube.com/results?search_query={{ encodedArtist }}">
+              <img src="../../assets/images/youtube.png" alt="youtube" />
+            </a>
           </li>
           </ul>
-        </div>
-        <!-- End Links -->
+        <!-- End linksList -->
       </div>
       <!-- End col 3-4 -->
     </div>
@@ -36,12 +48,14 @@
   <main class="container">
     <section class="searchWrapper">
       <div class="formWrapper">
-          <p>Find artists similar to 
-            <input type="text" id="searchField" class="searchField" autocomplete="off">
-            <button id="submit" class="icon-search searchButton"></button>
-          </p>
-          <div class="errorBalloon" id="errorBalloon"></div>
+      <form action="" id="searchForm">
+        <p>Find artists similar to 
+        <input type="text" id="searchField" class="searchField" autocomplete="off">
+        <button id="submit" class="icon-search searchButton"></button>
+        </p>
+        <div class="errorBalloon" id="errorBalloon"></div>
       </div>
+      </form>
     </section>
     <section class="resultsWrapper">
       <p class="searchedLine">Artists related to <span class="artistName"></span><p>

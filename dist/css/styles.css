@@ -122,7 +122,8 @@ img {
 
 .resultsWrapper {
   max-width: 75rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: none; }
   .resultsWrapper:after {
     content: "";
     display: table;
@@ -158,5 +159,10 @@ img {
     overflow: hidden; }
 
 .linksList {
-  list-style: none; }
+  list-style: none;
+  margin-top: 2rem; }
+  .linksList-link {
+    display: inline-block;
+    max-width: 60px;
+    margin-right: 0.8rem; }
 /*# sourceMappingURL=styles.css.map */

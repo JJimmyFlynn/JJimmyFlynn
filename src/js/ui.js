@@ -10,7 +10,7 @@ function appendArtists(relatedArtists) { //Adds Artist to container
       imageURL: relatedArtists[i].images[0].url,
       genres: relatedArtists[i].genres,
       spotifyLink: relatedArtists[i].external_urls.spotify,
-      wikipediaLink: encodeURIComponent(relatedArtists[i].name)
+      encodedArtist: encodeURIComponent(relatedArtists[i].name)
     });
     $('.artistsList').append(rendered);
   }
