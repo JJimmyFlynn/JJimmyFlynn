@@ -13,7 +13,7 @@ function getRelatedArtists(query) {
           artistID = data.artists.items[0].id;
           relatedRequest(artistID);
         } else {
-          displayError("Sorry, could not find the artist" + query);
+          displayError("Sorry, could not find the artist " + query);
         }
       }
     });
