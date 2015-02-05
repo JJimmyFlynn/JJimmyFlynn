@@ -55,7 +55,7 @@ img {
 
 .searchWrapper {
   height: 50vh;
-  padding-top: 43vh;
+  padding: 43vh 1rem 0;
   -webkit-transition: height 0.5s linear, padding-top 0.5s linear;
           transition: height 0.5s linear, padding-top 0.5s linear;
   background: #333333; }
@@ -123,6 +123,7 @@ img {
 .resultsWrapper {
   max-width: 75rem;
   margin: 0 auto;
+  padding: 0 1rem;
   display: none; }
   .resultsWrapper:after {
     content: "";
