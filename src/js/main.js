@@ -16,6 +16,12 @@ function getQuery() {
   }
 }
 
+function searchThis(e) {
+      e.preventDefault();
+      var artist = $(this).data('name');
+      subsequentSearch(artist);
+}
+
 function firstSearch() {
   var searchedArtist = getQuery();
   // Check for valid query
@@ -28,9 +34,14 @@ function firstSearch() {
   }
 }
 
-function subsequentSearch() {
+function subsequentSearch(query) {
   hideResults();
-  var searchedArtist = getQuery();
+  if(query === undefined) {
+    searchedArtist = getQuery();
+  } else {
+    searchedArtist = query;
+    $('#searchField').val(query);
+  }
   // Check for valid query
   if(searchedArtist != null) {
     removeSearchError();
@@ -48,5 +59,4 @@ $("#searchForm").submit(function(event) {
   } else {
     subsequentSearch();
   }
-  
 });

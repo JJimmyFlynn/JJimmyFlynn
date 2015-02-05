@@ -30,6 +30,7 @@
           </li>
           </ul>
         <!-- End linksList -->
+        <a href="#0" data-name="{{ name }}" class="searchThis">Search this artist &rarr;</a>
       </div>
       <!-- End col 3-4 -->
     </div>

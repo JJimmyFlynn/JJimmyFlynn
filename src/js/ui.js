@@ -2,7 +2,7 @@
 
 function appendArtists(relatedArtists) { //Adds Artist to container
   $.get('templates/artistBlock.mst', function(template) {
-    $('.artistsList').empty();
+    $('#artistsList').empty();
     for(var i=0; i<relatedArtists.length; i++){
       var rendered = Mustache.render(template, {
         name: relatedArtists[i].name,
@@ -11,8 +11,10 @@ function appendArtists(relatedArtists) { //Adds Artist to container
         spotifyLink: relatedArtists[i].external_urls.spotify,
         encodedArtist: encodeURIComponent(relatedArtists[i].name)
       });
-      $('.artistsList').append(rendered);
+      $('#artistsList').append(rendered);
     }
+    // Bind event to researc using each artist
+    $('.searchThis').on('click', searchThis);
   });
 }
 
