@@ -15,11 +15,16 @@
     max-height: 17.5rem;
     overflow: hidden;
   }
+  &-searchThis {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+  }
 }
 
 .linksList {
   list-style: none;
-  margin-top: 2rem;
+  margin: 2rem 0;
 
   &-link {
     display: inline-block;

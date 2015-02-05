@@ -14,7 +14,7 @@ function appendArtists(relatedArtists) { //Adds Artist to container
       $('#artistsList').append(rendered);
     }
     // Bind event to researc using each artist
-    $('.searchThis').on('click', searchThis);
+    $('.artistBlock-searchThis').on('click', searchThis);
   });
 }
 

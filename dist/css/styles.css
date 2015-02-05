@@ -157,10 +157,14 @@ img {
   .artistBlock-imgContainer {
     max-height: 17.5rem;
     overflow: hidden; }
+  .artistBlock-searchThis {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem; }
 
 .linksList {
   list-style: none;
-  margin-top: 2rem; }
+  margin: 2rem 0; }
   .linksList-link {
     display: inline-block;
     max-width: 60px;
