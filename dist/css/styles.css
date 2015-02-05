@@ -72,7 +72,7 @@ img {
   -webkit-transition: top 0.5s linear;
           transition: top 0.5s linear; }
 
-.searchField {
+.searchForm-searchField {
   -webkit-appearance: none;
   width: 40%;
   margin: 0 0 0 0.2rem;
@@ -81,22 +81,20 @@ img {
   border-bottom: 4px dashed #85BB23;
   color: white;
   font-size: 1.625rem; }
-  .searchField:focus {
+  .searchForm-searchField:focus {
     outline: none; }
-
-.searchButton {
+.searchForm-searchButton {
   -webkit-appearance: none;
-  margin-left: 2rem;
+  margin-left: 1rem;
   background: none;
   border: 0;
   color: white;
   font-size: 1.875rem; }
-  .searchButton:hover {
+  .searchForm-searchButton:hover {
     cursor: pointer; }
-  .searchButton:focus {
+  .searchForm-searchButton:focus {
     outline: 0; }
-
-.errorBalloon {
+.searchForm-errorBalloon {
   position: absolute;
   top: 3.5rem;
   left: 22.5rem;
@@ -107,7 +105,7 @@ img {
   opacity: 0;
   -webkit-transition: opacity 0.2s ease;
           transition: opacity 0.2s ease; }
-  .errorBalloon:after {
+  .searchForm-errorBalloon:after {
     content: "";
     position: absolute;
     top: -15px;
@@ -117,7 +115,7 @@ img {
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-bottom: 20px solid #CC3112; }
-  .errorBalloon.shown {
+  .searchForm-errorBalloon.shown {
     opacity: 1; }
 
 .resultsWrapper {
@@ -156,10 +154,10 @@ img {
     content: "";
     display: table;
     clear: both; }
-  .artistBlock h2 {
+  .artistBlock-artistHeader {
     display: inline-block;
     border-bottom: 2px solid #333333; }
-  .artistBlock .imgContainer {
+  .artistBlock-imgContainer {
     max-height: 17.5rem;
     overflow: hidden; }
 

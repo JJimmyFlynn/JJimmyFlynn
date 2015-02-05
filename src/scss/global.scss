@@ -28,7 +28,7 @@ $errorRed: #CC3112;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+// Serach Icon Font
 .icon-search:before {
   content: "\e601";
 }
@@ -44,6 +44,7 @@ input:-webkit-autofill {
   background-color: $brandBlack !important;
 }
 
+// Mixins
 @mixin clearfix() {
   &:after {
     content: "";
@@ -112,61 +113,62 @@ img {
   transition: top 0.5s linear;
 }
 
-.searchField {
-  -webkit-appearance: none;
-  width: 40%;
-  margin: 0 0 0 .2rem;
-  background-color: $brandBlack;
-  border: none;
-  border-bottom: 4px dashed $spotifyGreen;
-  color: white;
-  font-size: 1.625rem;
-  &:focus {
-    outline: none;
+.searchForm {
+  &-searchField {
+    -webkit-appearance: none;
+    width: 40%;
+    margin: 0 0 0 .2rem;
+    background-color: $brandBlack;
+    border: none;
+    border-bottom: 4px dashed $spotifyGreen;
+    color: white;
+    font-size: 1.625rem;
+    &:focus {
+      outline: none;
+    }
   }
-}
-
-.searchButton {
-  -webkit-appearance: none;
-  margin-left: 2rem;
-  background: none;
-  border: 0;
-  color: white;
-  font-size: 1.875rem;
-  &:hover {
-    cursor: pointer;
+  &-searchButton {
+    -webkit-appearance: none;
+    margin-left: 1rem;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 1.875rem;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline: 0;
+    }
   }
-  &:focus {
-    outline: 0;
-  }
-}
-
-.errorBalloon {
-  position: absolute;
-  top: 3.5rem;
-  left: 22.5rem;
-  padding: 0.8rem;
-  border-radius: 1rem;
-  background: $errorRed;
-  font-size: 0.8em;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  &:after {
-    content: "";
+  &-errorBalloon {
     position: absolute;
-    top: -15px;
-    right: 15px;
-    width: 0; 
-    height: 0; 
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 20px solid $errorRed;
-  }
-  &.shown {
-    opacity: 1;
+    top: 3.5rem;
+    left: 22.5rem;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    background: $errorRed;
+    font-size: 0.8em;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    &:after {
+      content: "";
+      position: absolute;
+      top: -15px;
+      right: 15px;
+      width: 0; 
+      height: 0; 
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid $errorRed;
+    }
+    &.shown {
+      opacity: 1;
+    }
   }
 }
 
+// Results Section Styles
 .resultsWrapper {
   @include clearfix;
   max-width: 75rem;
@@ -201,11 +203,11 @@ img {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: 4px solid $spotifyGreen;
-  h2 {
+  &-artistHeader {
     display: inline-block;
     border-bottom: 2px solid $brandBlack;
   }
-  .imgContainer {
+  &-imgContainer {
     max-height: 17.5rem;
     overflow: hidden;
   }
