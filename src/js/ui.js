@@ -1,19 +1,19 @@
 // UI Functions
 
 function appendArtists(relatedArtists) { //Adds Artist to container
-  var template = $('#artistTemplate').html();
-  Mustache.parse(template);
-  $('.artistsList').empty();
-  for(var i=0; i<relatedArtists.length; i++){
-    var rendered = Mustache.render(template, {
-      name: relatedArtists[i].name,
-      imageURL: relatedArtists[i].images[0].url,
-      genres: relatedArtists[i].genres,
-      spotifyLink: relatedArtists[i].external_urls.spotify,
-      encodedArtist: encodeURIComponent(relatedArtists[i].name)
-    });
-    $('.artistsList').append(rendered);
-  }
+  $.get('templates/artistBlock.mst', function(template) {
+    $('.artistsList').empty();
+    for(var i=0; i<relatedArtists.length; i++){
+      var rendered = Mustache.render(template, {
+        name: relatedArtists[i].name,
+        imageURL: relatedArtists[i].images[0].url,
+        genres: relatedArtists[i].genres,
+        spotifyLink: relatedArtists[i].external_urls.spotify,
+        encodedArtist: encodeURIComponent(relatedArtists[i].name)
+      });
+      $('.artistsList').append(rendered);
+    }
+  });
 }
 
 function revealResults() {

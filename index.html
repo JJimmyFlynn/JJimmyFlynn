@@ -5,44 +5,6 @@
   <title>Discover!</title>
   <link rel="stylesheet" href="dist/css/styles.css">
   <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-  <script id="artistTemplate" type="x-tmpl-mustache">
-    <div class="artistBlock">
-      <div class=" col col-1-4">
-      <div class="artistBlock-imgContainer">
-        <img src="{{ imageURL }}">
-      </div>
-      </div>
-      <!-- End col-1-4 -->
-      <div class="col col-3-4">
-        <h2 class="artistBlock-artistHeader">{{ name }}</h2>
-          <ul class="linksList">
-          <li class="linksList-link">
-            <a href="http://en.wikipedia.org/wiki/{{ encodedArtist }}">
-              <img src="../../assets/images/wikipedia.png" alt="wikipedia" />
-            </a>
-          </li>
-          <li class="linksList-link">
-            <a href="{{ spotifyLink }}">
-              <img src="../../assets/images/spotify.png" alt="spotify" />
-            </a>
-          </li>
-          <li class="linksList-link">
-            <a href="http://grooveshark.com/#!/search/artist?q={{ encodedArtist }}">
-              <img src="../../assets/images/grooveshark.png" alt="grooveshark" />
-            </a>
-          </li>
-          <li class="linksList-link">
-            <a href="https://www.youtube.com/results?search_query={{ encodedArtist }}">
-              <img src="../../assets/images/youtube.png" alt="youtube" />
-            </a>
-          </li>
-          </ul>
-        <!-- End linksList -->
-      </div>
-      <!-- End col 3-4 -->
-    </div>
-    <!-- End ArtistBlock -->
-  </script>
 </head>
 <body>
   <main class="container">
